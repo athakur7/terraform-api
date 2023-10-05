@@ -14,3 +14,8 @@ vscode:
     - amazonwebservices.aws-toolkit-vscode
     - hashicorp.terraform
     - ms-python.python
+ports:
+  - name: backend
+    port: 5000
+    onOpen: open-browser
+    visibility: public
