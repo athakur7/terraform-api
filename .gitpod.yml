@@ -9,6 +9,11 @@ tasks:
     before: |
       source ./bin/set_tf_alias
       source ./bin/install_aws_cli
+
+  - name: python-requirements
+    before: |
+      cd $PROJECT_ROOT
+      pip3 install -r requirements.txt
 vscode:
   extensions:
     - amazonwebservices.aws-toolkit-vscode
@@ -17,5 +22,4 @@ vscode:
 ports:
   - name: backend
     port: 5000
-    onOpen: open-browser
     visibility: public
